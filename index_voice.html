@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+	<meta charset='utf-8'>
+	<title>音声認識ページ</title>
+</head>
+<body>
+	<h2>音声認識しましょう</h2>
+	<button id='btn'>start</button>
+	<div id='content'></div>
+
+	<script>
+		const speech = new webkitSpeechRecongnition();
+		speech.lang = 'ja-JP';
+
+		const btn = document.getElementById('btn');
+		const content = document.getElementById('content');
+		btn.addEventListener('click', function() {
+			speech.start();
+		});
+		speech.addEventListener('result', function(e) {
+			console.log(e);
+		});
+	</script>
+</body>
+</html>
