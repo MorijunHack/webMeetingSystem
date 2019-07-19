@@ -10,14 +10,16 @@
 	<div id='content'></div>
 
 	<script>
-		const speech = new webkitSpeechRecongnition();
+		const speech = new webkitSpeechRecognition 1 ();
 		speech.lang = 'ja-JP';
 
 		const btn = document.getElementById('btn');
 		const content = document.getElementById('content');
-		btn.addEventListener('click', function() {
+
+		btn.addEventListener('click', functioon() {
 			speech.start();
 		});
+
 		speech.addEventListener('result', function(e) {
 			console.log(e);
 		});
